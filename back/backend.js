@@ -1531,7 +1531,7 @@ app.get("/channel_fh264_getvideo", (req, res) => {
 
     req.query.v = req.query.v.replace(/[^a-zA-Z0-9+\-+_]/g, "").substring(0, 11)
 
-    if(req.headers.range && yt2009_utils.privExpStreamEligible(req)) {
+    if(req.headers.range) {
         let partSize = (1024 * 1024 * 2) // send the file in 2mb parts
         // when streaming
 
