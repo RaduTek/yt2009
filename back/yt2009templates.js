@@ -866,6 +866,7 @@ module.exports = {
             <gd:feedLink href='http://gdata.youtube.com/feeds/api/videos/${video.id}/comments?v=2' countHint='1'/>
         </gd:comments>
         <media:group>
+            <media:content url='${videoUrl}' type='video/3gpp' medium='video' expression='full' duration='999' yt:format='2'/>
             <media:content url='${videoUrl}' type='video/3gpp' medium='video' expression='full' duration='999' yt:format='3'/>
             <media:credit role='uploader' scheme='urn:youtube' yt:type='partner'>${video.uploaderName}</media:credit>
             <media:description type='plain'>${sd(video.description || "")}</media:description>
@@ -1226,6 +1227,7 @@ xmlns:yt='http://gdata.youtube.com/schemas/2007'>
             </gd:comments>
             <media:group>
                 <media:category label='${category}' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>${category}</media:category>
+                <media:content url='${videoUrl}' type='video/3gpp' medium='video' expression='full' duration='999' yt:format='2'/>
                 <media:content url='${videoUrl}' type='video/3gpp' medium='video' expression='full' duration='999' yt:format='3'/>${qualityCode}
                 <media:description type='plain'>${description.split("<").join("").split(">").join("").split("&").join("&amp;")}</media:description>
                 <media:keywords>${unduplicateKeywordList.join(", ")}</media:keywords>
