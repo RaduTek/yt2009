@@ -219,7 +219,7 @@ module.exports = {
         nextUrl = nextUrl.split("&").join("&amp;")
         let next = `\n    <link rel='next' type='application/atom+xml' href='${nextUrl}'/>`
         return `<?xml version='1.0' encoding='UTF-8'?>
-<feed>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:app='http://purl.org/atom/app#' xmlns:media='http://search.yahoo.com/mrss/' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gd='http://schemas.google.com/g/2005' xmlns:yt='http://gdata.youtube.com/schemas/2007'>
     <id>http://gdata.youtube.com/feeds/api/videos</id>
     <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
     <title type='text'>YouTube Videos</title>
@@ -1061,7 +1061,7 @@ module.exports = {
             </div>`
     },
     "gdata_emptyfeed": `<?xml version='1.0' encoding='UTF-8'?>
-    <feed>
+    <feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/'>
         <id>http://gdata.youtube.com/feeds/api/standardfeeds/us/recently_featured</id>
         <updated>2010-12-21T18:59:58.000-08:00</updated>
         <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
